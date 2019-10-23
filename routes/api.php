@@ -18,6 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/login', 'Auth\LoginController@authenticate');
+
+//Create
 Route::post('/createEvaluator', 'EvaluatorController@storeEvaluator');
 Route::post('/createCategory', 'CategoryController@storeCategory');
+Route::post('/createEvaluated', 'EvaluatedController@storeEvaluated');
+
+//Obtener lista de:
 Route::get('/getCategories', 'CategoryController@getCategories');
+Route::get('/getEvaluator', 'EvaluatorController@getEvaluator');
+Route::get('/getEvaluated', 'EvaluatedController@getEvaluated');
