@@ -33,7 +33,7 @@ class EvaluatedController extends Controller
         $evaluated->name = $request->name;
         $evaluated->image =  $request->image;
         $evaluated->category_id = $request->category_id;
-        $evaluator->save();
+        $evaluated->save();
 
       return response()->json(['type' => 'success', 'message' => 'Registro completo'], 200);
 
