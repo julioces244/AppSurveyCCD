@@ -24,7 +24,7 @@ class EvaluatedController extends Controller
 
     }
 
-    public function getEvaluated(Request $idcategory){
+    public function getEvaluated($idcategory){
 
       try{
 
