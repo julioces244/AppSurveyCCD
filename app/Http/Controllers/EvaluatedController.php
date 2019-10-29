@@ -33,45 +33,59 @@ class EvaluatedController extends Controller
         switch($idcategory){
           case 16:
           $array = [16,15,14,13,12];
+          break;
 
           case 15:
           $array = [12,13,14,15,16];
+          break;
 
           case 14:
           $array = [11,12,13,14,15,16];
+          break;
 
           case 13:
           $array = [9,10,12,13,14,15,16];
+          break;
 
           case 12:
           $array = [8,12,13,14,15,16];
+          break;
 
           case 10:
           $array = [10,13,7,14];
+          break;
 
           case 9:
           $array = [9,13,14,6];
+          break;
 
           case 8:
           $array = [8,12,5];
+          break;
 
           case 7:
           $array = [7,4,10,13];
+          break;
 
           case 6:
           $array = [6,3,9,13];
+          break;
 
           case 5:
           $array = [5,2,8,12];
+          break;
 
           case 4:
           $array = [4,7,13];
+          break;
 
           case 3:
           $array = [3,6,13];
+          break;
 
           case 2:
           $array = [2,5,12];
+          break;
         }
 
         $evalauteds = Evaluated::All()->whereIn('category_id', $array);
