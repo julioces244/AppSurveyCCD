@@ -9,6 +9,21 @@ use App\Evaluated;
 class EvaluatedController extends Controller
 {
 
+    public function getEvaluatedAll(){
+
+      try{
+        $evalauteds = Evaluated::All();;
+        return $evalauteds;
+        return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
+
+      }catch(\Exception $e){
+
+        return response()->json(['type' => 'error', 'message' => $e->getMessage()], 500);
+
+      }
+
+    }
+
     public function getEvaluated(Request $idcategory){
 
       try{
