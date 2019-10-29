@@ -28,7 +28,7 @@ Route::post('/createEvaluated', 'EvaluatedController@storeEvaluated');
 Route::get('/getCategories', 'CategoryController@getCategories');
 Route::get('/getEvaluator', 'EvaluatorController@getEvaluator');
 
-Route::get('/getEvaluated', 'EvaluatedController@getEvaluated');
+Route::get('/getEvaluated/{$idcategory}', 'EvaluatedController@getEvaluated');
 Route::get('/getEvaluatedDirectivo', 'EvaluatedController@getEvaluatedDirectivo');
 Route::get('/getEvaluatedSoportelima', 'EvaluatedController@getEvaluatedSoportelima');
 Route::get('/getEvaluatedSoportepisco', 'EvaluatedController@getEvaluatedSoportepisco');

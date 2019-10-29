@@ -9,11 +9,57 @@ use App\Evaluated;
 class EvaluatedController extends Controller
 {
 
-    public function getEvaluated(){
+    public function getEvaluated(Request $idcategory){
 
       try{
 
-        $evalauteds = Evaluated::All();
+        $array = [];
+
+        switch($idcategory){
+          case 16:
+          $array = [16,15,14,13,12];
+
+          case 15:
+          $array = [12,13,14,15,16];
+
+          case 14:
+          $array = [11,12,13,14,15,16];
+
+          case 13:
+          $array = [9,10,12,13,14,15,16];
+
+          case 12:
+          $array = [8,12,13,14,15,16];
+
+          case 10:
+          $array = [10,13,7,14];
+
+          case 9:
+          $array = [9,13,14,6];
+
+          case 8:
+          $array = [8,12,5];
+
+          case 7:
+          $array = [7,4,10,13];
+
+          case 6:
+          $array = [6,3,9,13];
+
+          case 5:
+          $array = [5,2,8,12];
+
+          case 4:
+          $array = [4,7,13];
+
+          case 3:
+          $array = [3,6,13];
+
+          case 2:
+          $array = [2,5,12];
+        }
+
+        $evalauteds = Evaluated::All()->whereIn('category_id', $array);
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
