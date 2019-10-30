@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 use App\Evaluated;
 
 class EvaluatedController extends Controller
@@ -88,7 +88,7 @@ class EvaluatedController extends Controller
           break;
         }
 
-        $evalauteds = DB::table('Evaluated')->whereIn('category_id', $array)->get();
+        $evalauteds = DB::table('evaluated')->whereIn('category_id', $array)->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
