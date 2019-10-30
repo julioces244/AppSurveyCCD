@@ -88,7 +88,7 @@ class EvaluatedController extends Controller
           break;
         }
 
-        $evalauteds = Evaluated::whereIn('category_id', $array);
+        $evalauteds = Evaluated::All()->whereIn('category_id', $array)->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
