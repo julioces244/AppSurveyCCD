@@ -15,12 +15,14 @@ class EvaluatorTableSeeder extends Seeder
           'name' => 'Julio César',
           'username' => '201',
           'password' => 'ccd2019',
+          'category_id' => 16,
       ]);
 
       DB::table('evaluators')->insert([
           'name' => 'Julio Cesar2',
           'description' => '202',
           'password' => 'ccd2019',
+          'category_id' => 2,
       ]);
     }
 }
