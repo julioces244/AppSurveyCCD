@@ -20,7 +20,7 @@ class EvaluatorTableSeeder extends Seeder
 
       DB::table('evaluators')->insert([
           'name' => 'Julio Cesar2',
-          'description' => '202',
+          'username' => '202',
           'password' => 'ccd2019',
           'category_id' => 2,
       ]);
