@@ -154,5 +154,35 @@ class EvaluatedTableSeeder extends Seeder
           'image' => 'giancarlopradinet.png',
           'category_id' => 14,
       ]);
+
+      DB::table('evaluated')->insert([
+          'name' => 'Rudy Laguna',
+          'image' => 'rudylaguna.jpg',
+          'category_id' => 16,
+      ]);
+
+      DB::table('evaluated')->insert([
+          'name' => 'Sergio Villegas',
+          'image' => 'sergiovillegas.jpg',
+          'category_id' => 16,
+      ]);
+
+      DB::table('evaluated')->insert([
+          'name' => 'Katherine Piedra',
+          'image' => 'katherinepiedra.jpg',
+          'category_id' => 16,
+      ]);
+
+      DB::table('evaluated')->insert([
+          'name' => 'Gene Eduardo Olarte',
+          'image' => 'eduardoolarte.jpg',
+          'category_id' => 15,
+      ]);
+
+      DB::table('evaluated')->insert([
+          'name' => 'Alvaro Orozco',
+          'image' => 'alvaroorozco.jpg',
+          'category_id' => 15,
+      ]);
     }
 }
