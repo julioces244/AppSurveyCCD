@@ -179,35 +179,35 @@ class EvaluatorTableSeeder extends Seeder
           'category_id' => 14,
       ]);
 
-      DB::table('evaluated')->insert([
+      DB::table('evaluators')->insert([
           'name' => 'Rudy Laguna',
           'username' => '10050',
           'password' => Hash::make('ccd2019'),
           'category_id' => 16,
       ]);
 
-      DB::table('evaluated')->insert([
+      DB::table('evaluators')->insert([
           'name' => 'Sergio Villegas',
           'username' => '10051',
           'password' => Hash::make('ccd2019'),
           'category_id' => 16,
       ]);
 
-      DB::table('evaluated')->insert([
+      DB::table('evaluators')->insert([
           'name' => 'Katherine Piedra',
           'username' => '10052',
           'password' => Hash::make('ccd2019'),
           'category_id' => 16,
       ]);
 
-      DB::table('evaluated')->insert([
+      DB::table('evaluators')->insert([
           'name' => 'Gene Eduardo Olarte',
           'username' => '20077',
           'password' => Hash::make('ccd2019'),
           'category_id' => 15,
       ]);
 
-      DB::table('evaluated')->insert([
+      DB::table('evaluators')->insert([
           'name' => 'Alvaro Orozco',
           'username' => '20087',
           'password' => Hash::make('ccd2019'),
