@@ -21,7 +21,7 @@ class Evaluator extends Authenticatable
     public function evaluated()
     {
 
-        return $this->belongsToMany('App\Evaluated', 'evaluator_evaluated','evaluator_id', 'evaluated_id');
+        return $this->belongsToMany('App\Evaluated', 'evaluator_evaluated','evaluator_id', 'evaluated_id')->withPivot('answer1','answer2');
 
     }
 }
