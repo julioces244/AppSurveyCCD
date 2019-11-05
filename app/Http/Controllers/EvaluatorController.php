@@ -80,11 +80,7 @@ class EvaluatorController extends Controller
       $answer24 = $request->answer24;
 
       $evaluator->evaluated()->attach($idevaluated,
-      ['answer1' => $answer1],
-      ['answer2' => $answer2],
-      ['answer3' => $answer3],
-      ['answer4' => $answer4],
-      ['answer5' => $answer5]);
+      ['answer1' => $answer1, 'answer2' => $answer2, 'answer3' => $answer3, 'answer4' => $answer4, 'answer5' => $answer5]);
 
     }
 
