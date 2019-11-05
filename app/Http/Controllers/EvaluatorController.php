@@ -60,4 +60,12 @@ class EvaluatorController extends Controller
       $evaluator->evaluated()->attach($idevaluated, ['answer1' => $question1]);
 
     }
+
+
+    public function getScore($id){
+
+      $evaluator = Evaluator::find($id);
+      return view ('listscore')->with('evaluator', $evaluator);
+
+    }
 }
