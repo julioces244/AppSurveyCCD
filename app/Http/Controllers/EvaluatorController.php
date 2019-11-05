@@ -54,10 +54,37 @@ class EvaluatorController extends Controller
 
       $evaluator = Evaluator::find($idevaluator);
 
-      $question1 = $request->question1;
-      $question2 = $request->question2;
+      $answer1 = $request->answer1;
+      $answer2 = $request->answer2;
+      $answer3 = $request->answer3;
+      $answer4 = $request->answer4;
+      $answer5 = $request->answer5;
+      $answer6 = $request->answer6;
+      $answer7 = $request->answer7;
+      $answer8 = $request->answer8;
+      $answer9 = $request->answer9;
+      $answer10 = $request->answer10;
+      $answer11 = $request->answer11;
+      $answer12 = $request->answer12;
+      $answer13 = $request->answer13;
+      $answer14 = $request->answer14;
+      $answer15 = $request->answer15;
+      $answer16 = $request->answer16;
+      $answer17 = $request->answer17;
+      $answer18 = $request->answer18;
+      $answer19 = $request->answer19;
+      $answer20 = $request->answer20;
+      $answer21 = $request->answer21;
+      $answer22 = $request->answer22;
+      $answer23 = $request->answer23;
+      $answer24 = $request->answer24;
 
-      $evaluator->evaluated()->attach($idevaluated, ['answer1' => $question1]);
+      $evaluator->evaluated()->attach($idevaluated,
+      ['answer1' => $answer1],
+      ['answer2' => $answer2],
+      ['answer3' => $answer3],
+      ['answer4' => $answer4],
+      ['answer5' => $answer5]);
 
     }
 
