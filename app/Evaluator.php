@@ -16,4 +16,12 @@ class Evaluator extends Authenticatable
     protected $fillable = [
         'idEvaluator', 'name', 'username', 'password',
     ];
+
+
+    public function evaluated()
+    {
+
+        return $this->belongsToMany('App\Evaluated', 'evaluator_evaluated','evaluator_id', 'evaluated_id');
+
+    }
 }

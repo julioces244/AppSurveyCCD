@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent;
 use Illuminate\Support\Facades\Hash;
 
 use App\Evaluator;
+use App\Evaluated;
 
 class EvaluatorController extends Controller
 {
@@ -42,6 +43,21 @@ class EvaluatorController extends Controller
       }catch(\Exception $e){
           return response()->json(['type' => 'error', 'message' => $e->getMessage()], 500);
       }
+
+    }
+
+    public function storeScore(Request $request){
+
+      $idevaluator = $request->idevaluator;
+
+      $idevaluated = $request->idevaluated;
+
+      $evaluator = Evaluator::find($idevaluator);
+
+      $question1 = $request->question1;
+      $question2 = $request->question2;
+
+      $evaluator->evaluated()->attach($idevaluated, ['answer1' => $question1]);
 
     }
 }

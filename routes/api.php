@@ -44,3 +44,6 @@ Route::get('/getEvaluatedCoordinadortecnologia', 'EvaluatedController@getEvaluat
 Route::get('/getEvaluatedAcompañanteaprendizaje', 'EvaluatedController@getEvaluatedAcompañanteaprendizaje');
 Route::get('/getEvaluatedAcompañantedigital', 'EvaluatedController@getEvaluatedAcompañantedigital');
 Route::get('/getEvaluatedAcompañantetecnologia', 'EvaluatedController@getEvaluatedAcompañantetecnologia');
+
+
+Route::post('/storeScore','EvaluatorController@storeScore');
