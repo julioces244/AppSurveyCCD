@@ -36,6 +36,21 @@
           <td>{{$evaluated->pivot->answer3}}</td>
           <td>{{$evaluated->pivot->answer4}}</td>
           <td>{{$evaluated->pivot->answer5}}</td>
+          <td>{{$evaluated->pivot->answer6}}</td>
+          <td>{{$evaluated->pivot->answer7}}</td>
+          <td>{{$evaluated->pivot->answer8}}</td>
+          <td>{{$evaluated->pivot->answer9}}</td>
+          <td>{{$evaluated->pivot->answer10}}</td>
+          <td>{{$evaluated->pivot->answer11}}</td>
+          <td>{{$evaluated->pivot->answer12}}</td>
+          <td>{{$evaluated->pivot->answer13}}</td>
+          <td>{{$evaluated->pivot->answer14}}</td>
+          <td>{{$evaluated->pivot->answer15}}</td>
+          <td>{{$evaluated->pivot->answer16}}</td>
+          <td>{{$evaluated->pivot->answer17}}</td>
+          <td>{{$evaluated->pivot->answer18}}</td>
+          <td>{{$evaluated->pivot->answer19}}</td>
+          <td>{{$evaluated->pivot->answer20}}</td>
         </tr>
         @endforeach
       </tbody>
