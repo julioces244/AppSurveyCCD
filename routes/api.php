@@ -46,4 +46,4 @@ Route::get('/getEvaluatedAcompañantedigital', 'EvaluatedController@getEvaluated
 Route::get('/getEvaluatedAcompañantetecnologia', 'EvaluatedController@getEvaluatedAcompañantetecnologia');
 
 
-Route::post('/storeScore','EvaluatorController@storeScore');
+Route::post('/storeScore/{idevaluador}','EvaluatorController@storeScore');

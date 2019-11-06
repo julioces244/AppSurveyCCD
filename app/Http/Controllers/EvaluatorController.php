@@ -46,7 +46,30 @@ class EvaluatorController extends Controller
 
     }
 
-    public function storeScore(Request $request){
+    public function storeScore(Request $request, $idevaluador){
+
+      $content = json_decode($request->getContent());
+
+      $evaluador = Evaluator::find($idevaluador);
+
+  		foreach($content as $respuesta) {
+
+  			echo $respuesta->evaluadoid . " - " . $respuesta->pregunta1 . " - " . $respuesta->pregunta2 . " - " . $respuesta->pregunta3 . " - " . $idevaluador . '<br/>';
+
+  			$evaluador->evaluated->attach($respuesta->evaluadoid, ['answer1' => $respuesta->pregunta1, 'answer2' => $respuesta->pregunta2, 'answer3' => $respuesta->pregunta3]);
+
+      }
+
+
+
+      $message = 'Cuestionario finalizado satisfactoriamente';
+
+      return response()->json(compact('message'));
+
+
+
+
+      /*
 
       $idevaluator = $request->idevaluator;
 
@@ -81,6 +104,7 @@ class EvaluatorController extends Controller
 
       $evaluator->evaluated()->attach($idevaluated,
       ['answer1' => $answer1, 'answer2' => $answer2, 'answer3' => $answer3, 'answer4' => $answer4, 'answer5' => $answer5]);
+*/
 
     }
 
