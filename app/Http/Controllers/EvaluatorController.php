@@ -56,7 +56,7 @@ class EvaluatorController extends Controller
 
   			echo $respuesta->evaluadoid . " - " . $respuesta->pregunta1 . " - " . $respuesta->pregunta2 . " - " . $respuesta->pregunta3 . " - " . $idevaluador . '<br/>';
 
-  			$evaluador->evaluated->attach($respuesta->evaluadoid, ['answer1' => $respuesta->pregunta1, 'answer2' => $respuesta->pregunta2, 'answer3' => $respuesta->pregunta3]);
+  			$evaluador->evaluated()->attach($respuesta->evaluadoid, ['answer1' => $respuesta->pregunta1, 'answer2' => $respuesta->pregunta2, 'answer3' => $respuesta->pregunta3]);
 
       }
 
