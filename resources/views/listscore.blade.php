@@ -23,6 +23,21 @@
             <th>Pregunta3</th>
             <th>Pregunta4</th>
             <th>Pregunta5</th>
+            <th>Pregunta6</th>
+            <th>Pregunta7</th>
+            <th>Pregunta8</th>
+            <th>Pregunta9</th>
+            <th>Pregunta10</th>
+            <th>Pregunta11</th>
+            <th>Pregunta12</th>
+            <th>Pregunta13</th>
+            <th>Pregunta14</th>
+            <th>Pregunta15</th>
+            <th>Pregunta16</th>
+            <th>Pregunta17</th>
+            <th>Pregunta18</th>
+            <th>Pregunta19</th>
+            <th>Pregunta20</th>
         </tr>
       </thead>
 
