@@ -162,9 +162,9 @@ class EvaluatedTableSeeder extends Seeder
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Sergio Villegas',
-          'image' => 'sergiovillegas.jpg',
-          'category_id' => 16,
+          'name' => 'Fátima Cabrera',
+          'image' => 'fatimacabrera.jpg',
+          'category_id' => 15,
       ]);
 
       DB::table('evaluated')->insert([

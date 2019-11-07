@@ -187,10 +187,10 @@ class EvaluatorTableSeeder extends Seeder
       ]);
 
       DB::table('evaluators')->insert([
-          'name' => 'Sergio Villegas',
-          'username' => '10051',
+          'name' => 'Fátima Cabrera',
+          'username' => '20091',
           'password' => Hash::make('ccd2019'),
-          'category_id' => 16,
+          'category_id' => 15,
       ]);
 
       DB::table('evaluators')->insert([
