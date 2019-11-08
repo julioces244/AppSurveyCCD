@@ -152,7 +152,7 @@ class EvaluatedTableSeeder extends Seeder
       DB::table('evaluated')->insert([
           'name' => 'Giancarlo Pradinet',
           'image' => 'giancarlopradinet.png',
-          'category_id' => 14,
+          'category_id' => 11,
       ]);
 
       DB::table('evaluated')->insert([

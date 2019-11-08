@@ -176,7 +176,7 @@ class EvaluatorTableSeeder extends Seeder
           'name' => 'Giancarlo Pradinet',
           'username' => '20049',
           'password' => Hash::make('ccd2019'),
-          'category_id' => 14,
+          'category_id' => 11,
       ]);
 
       DB::table('evaluators')->insert([

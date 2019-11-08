@@ -51,6 +51,10 @@ class EvaluatedController extends Controller
           $array = [8,12,13,14,15,16];
           break;
 
+          case 11:
+          $array = [14];
+          break;
+
           case 10:
           $array = [10,13,7,14];
           break;
@@ -347,6 +351,13 @@ class EvaluatedController extends Controller
       }catch(\Exception $e){
           return response()->json(['type' => 'error', 'message' => $e->getMessage()], 500);
       }
+
+    }
+
+    public function indexEvaluated(){
+
+      $evalauteds = DB::table('evaluated')->orderBy('name')->get();
+      return view('listaevaluados')->with('evaluateds',$evalauteds);
 
     }
 }

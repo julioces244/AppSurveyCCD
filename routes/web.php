@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 
 Route::get('/listscore/{id}', 'EvaluatorController@getScore');
+
+Route::get('/listaevaluados', 'EvaluatedController@indexEvaluated');

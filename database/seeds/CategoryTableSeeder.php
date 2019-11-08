@@ -62,8 +62,8 @@ class CategoryTableSeeder extends Seeder
       ]);
 
       DB::table('categories')->insert([
-          'name' => 'Especialista Redes y Telecomunicaciones',
-          'description' => 'ERT',
+          'name' => 'Seguridad CCD Pisco',
+          'description' => 'SP',
       ]);
 
       DB::table('categories')->insert([
