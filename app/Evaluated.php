@@ -23,4 +23,8 @@ class Evaluated extends Model
                     'answer55','answer56','answer57','answer58');
 
     }
+
+    public function category(){
+      return $this->belongsTo('App\Category','category_id');
+    }
 }

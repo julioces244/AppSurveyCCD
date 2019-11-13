@@ -28,6 +28,9 @@ class EvaluatedController extends Controller
 
       try{
 
+        //$idevalu = DB::table('evaluated')->where('idEvaluated', $idcategory)->value('category_id');
+        //dd($idevalu);
+
         $array = [];
 
         switch($idcategory){
@@ -93,6 +96,92 @@ class EvaluatedController extends Controller
         }
 
         $evalauteds = DB::table('evaluated')->whereIn('category_id', $array)->get();
+        return $evalauteds;
+        return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
+
+      }catch(\Exception $e){
+
+        return response()->json(['type' => 'error', 'message' => $e->getMessage()], 500);
+
+      }
+
+    }
+
+
+    //Obteniendo evaluateds sin el propio usuario
+
+    public function getEvaluated2($idcategory){
+
+      try{
+
+        $idevalu = DB::table('evaluated')->where('idEvaluated', $idcategory)->value('category_id');
+        //dd($idevalu);
+
+        $array = [];
+
+        switch($idevalu){
+          case 16:
+          $array = [16,15,14,13,12];
+          break;
+
+          case 15:
+          $array = [12,13,14,15,16];
+          break;
+
+          case 14:
+          $array = [11,12,13,14,15,16];
+          break;
+
+          case 13:
+          $array = [9,10,12,13,14,15,16];
+          break;
+
+          case 12:
+          $array = [8,12,13,14,15,16];
+          break;
+
+          case 11:
+          $array = [14];
+          break;
+
+          case 10:
+          $array = [10,13,7,14];
+          break;
+
+          case 9:
+          $array = [9,13,14,6];
+          break;
+
+          case 8:
+          $array = [8,12,5];
+          break;
+
+          case 7:
+          $array = [7,4,10,13];
+          break;
+
+          case 6:
+          $array = [6,3,9,13];
+          break;
+
+          case 5:
+          $array = [5,2,8,12];
+          break;
+
+          case 4:
+          $array = [4,7,13];
+          break;
+
+          case 3:
+          $array = [3,6,13];
+          break;
+
+          case 2:
+          $array = [2,5,12];
+          break;
+        }
+
+        $evalauteds = DB::table('evaluated')->whereIn('category_id', $array)->whereNotIn('idevaluated', [$idcategory])->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
@@ -359,5 +448,82 @@ class EvaluatedController extends Controller
       $evalauteds = DB::table('evaluated')->orderBy('name')->get();
       return view('listaevaluados')->with('evaluateds',$evalauteds);
 
+    }
+
+    public function getResults($idevaluated){
+      //$numsiempre = DB::table()
+
+      $person = DB::table('evaluated')->where('idEvaluated', $idevaluated)->get();
+
+      //$arrat = ['asnwer1','answer4'];
+      //Obteniendo valores de siempre por cada pregunta, en total sería 4 (cantidad de alternativas) x cantidad de preguntas
+      $result = DB::table('evaluator_evaluated')->where('evaluated_id',$idevaluated)->where('answer1','Siempre')->where('answer4','Siempre')->select('answer1','answer4')->get()->sum();
+
+      //Obteniendo el total de siempre por cada grupo de preguntas, en total sería 4 (ya que se obtiene por todas la preguntas que se quiere)
+      $res = DB::table('evaluator_evaluated')->get();
+      $columns = ['answer1','answer2','answer3','answer4','answer5','answer6','answer7','answer8','answer9','answer10'];
+
+      $data = [];
+      $datas["all"]=0;
+
+      $data2 = [];
+      $datas2["all"]=0;
+
+      $data3 = [];
+      $datas3["all"]=0;
+
+      $data4 = [];
+      $datas4["all"]=0;
+
+      foreach ($columns as $column) {
+        $data = [
+          "column_name" => $column,
+          "count_true" => $res->whereIn($column,['Sí, siempre','Siempre'])->where('evaluated_id',$idevaluated)->count(),
+        ];
+        $datas["all"] += $data["count_true"];
+        //dd($datas["all"]);
+      }
+
+      foreach ($columns as $column) {
+        $data2 = [
+          "column_name" => $column,
+          "count_true" => $res->where($column,'Frecuentemente')->where('evaluated_id',$idevaluated)->count(),
+        ];
+        $datas2["all"] += $data2["count_true"];
+        //dd($datas["all"]);
+      }
+
+      foreach ($columns as $column) {
+        $data3 = [
+          "column_name" => $column,
+          "count_true" => $res->where($column,'A veces')->where('evaluated_id',$idevaluated)->count(),
+        ];
+        $datas3["all"] += $data3["count_true"];
+        //dd($datas["all"]);
+      }
+
+      foreach ($columns as $column) {
+        $data4 = [
+          "column_name" => $column,
+          "count_true" => $res->whereIn($column,['No, nunca','Nunca'])->where('evaluated_id',$idevaluated)->count(),
+        ];
+        $datas4["all"] += $data4["count_true"];
+        //dd($datas["all"]);
+      }
+
+      $siemprehb = $datas["all"];
+      $frecuentementehb = $datas2["all"];
+      $aveceshb = $datas3["all"];
+      $nuncahb = $datas4["all"];
+      //dd(((9/25)*100).'%');
+      //Obtener número de filas de la tabla intermedia, servirá para multiplicarlo con el total de preguntas
+      //y obtener el total de respuestas posibles para el usuario
+      //dd($res->count());
+
+      //dd($siemprehb);
+
+      return view('scoreevaluado')->with('person',$person)->with('siemprehb', $siemprehb)
+                                  ->with('frecuentementehb',$frecuentementehb)->with('aveceshb',$aveceshb)
+                                  ->with('nuncahb',$nuncahb);
     }
 }

@@ -20,7 +20,7 @@
           <img class="card-img-top" src="images/{{$evaluated->image}}" style="width: 11.9rem; height: 200px;">
           <div class="card-body">
             <h5 class="card-title">{{$evaluated->name}}</h5>
-            <a href="#" class="btn btn-primary">Ver detalles</a>
+            <a href="listaevaluados/{{$evaluated->idEvaluated}}" class="btn btn-primary">Ver detalles</a>
           </div>
         </div>
         @endforeach
