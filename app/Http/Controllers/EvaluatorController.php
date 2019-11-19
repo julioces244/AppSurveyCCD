@@ -103,20 +103,7 @@ class EvaluatorController extends Controller
             'answer42' => $respuesta->pregunta42,
             'answer43' => $respuesta->pregunta43,
             'answer44' => $respuesta->pregunta44,
-            'answer45' => $respuesta->pregunta45,
-            'answer46' => $respuesta->pregunta46,
-            'answer47' => $respuesta->pregunta47,
-            'answer48' => $respuesta->pregunta48,
-            'answer49' => $respuesta->pregunta49,
-            'answer50' => $respuesta->pregunta50,
-            'answer51' => $respuesta->pregunta51,
-            'answer52' => $respuesta->pregunta52,
-            'answer53' => $respuesta->pregunta53,
-            'answer54' => $respuesta->pregunta54,
-            'answer55' => $respuesta->pregunta55,
-            'answer56' => $respuesta->pregunta56,
-            'answer57' => $respuesta->pregunta57,
-            'answer58' => $respuesta->pregunta58]);
+            'answer45' => $respuesta->pregunta45]);
 
         }
 

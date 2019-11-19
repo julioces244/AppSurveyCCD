@@ -29,7 +29,10 @@ Route::get('/getCategories', 'CategoryController@getCategories');
 Route::get('/getEvaluator', 'EvaluatorController@getEvaluator');
 
 Route::get('/getEvaluatedAll', 'EvaluatedController@getEvaluatedAll');
+
 Route::get('/getEvaluated/{idcategory}', 'EvaluatedController@getEvaluated');
+Route::get('/getEvaluated2/{idcategory}', 'EvaluatedController@getEvaluated2');
+
 Route::get('/getEvaluatedDirectivo', 'EvaluatedController@getEvaluatedDirectivo');
 Route::get('/getEvaluatedSoportelima', 'EvaluatedController@getEvaluatedSoportelima');
 Route::get('/getEvaluatedSoportepisco', 'EvaluatedController@getEvaluatedSoportepisco');
