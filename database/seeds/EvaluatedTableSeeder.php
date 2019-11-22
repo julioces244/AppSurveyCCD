@@ -184,5 +184,11 @@ class EvaluatedTableSeeder extends Seeder
           'image' => 'alvaroorozco.jpg',
           'category_id' => 15,
       ]);
+
+      DB::table('evaluated')->insert([
+          'name' => 'José Perez',
+          'image' => 'joseperez.png',
+          'category_id' => 10,
+      ]);
     }
 }

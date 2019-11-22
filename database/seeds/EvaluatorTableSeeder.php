@@ -213,5 +213,12 @@ class EvaluatorTableSeeder extends Seeder
           'password' => Hash::make('ccd2019'),
           'category_id' => 15,
       ]);
+
+      DB::table('evaluators')->insert([
+          'name' => 'José Perez',
+          'username' => '30074',
+          'password' => Hash::make('ccd2019'),
+          'category_id' => 10,
+      ]);
     }
 }
