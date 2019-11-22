@@ -1030,7 +1030,7 @@ class EvaluatedController extends Controller
       $siemprehb3 = $datasflexibilidad["all"];
       $frecuentementehb3 = $datasflexibilidad2["all"];
       $aveceshb3 = $datasflexibilidad3["all"];
-      $nuncahb3 = $datasflexibilidad3["all"];
+      $nuncahb3 = $datasflexibilidad4["all"];
 
       $siemprehb4 = $datasresponsabilidad["all"];
       $frecuentementehb4 = $datasresponsabilidad2["all"];
