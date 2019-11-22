@@ -110,11 +110,11 @@ class EvaluatedController extends Controller
 
     //Obteniendo evaluateds sin el propio usuario mal!!!
 
-    public function getEvaluated2($idcategory){
+    public function getEvaluated2($idself){
 
       try{
 
-        $idevalu = DB::table('evaluated')->where('idEvaluated', $idcategory)->value('category_id');
+        $idevalu = DB::table('evaluated')->where('idEvaluated', $idself)->value('category_id');
         //dd($idevalu);
 
         $array = [];
@@ -181,7 +181,7 @@ class EvaluatedController extends Controller
           break;
         }
 
-        $evalauteds = DB::table('evaluated')->whereIn('category_id', $array)->whereNotIn('idevaluated', [$idcategory])->get();
+        $evalauteds = DB::table('evaluated')->whereIn('category_id', $array)->whereNotIn('idevaluated', [$idself])->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
