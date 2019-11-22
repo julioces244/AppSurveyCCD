@@ -1077,8 +1077,8 @@ class EvaluatedController extends Controller
       }else {
         $percentageresultados1 = 0;
         $percentageresultados2 = 0;
-        $percentageresultados1 = 0;
-        $percentageresultados1 = 0;
+        $percentageresultados3 = 0;
+        $percentageresultados4 = 0;
       }
 
       $totalcolumnashb2 = count($workteamcolums);
