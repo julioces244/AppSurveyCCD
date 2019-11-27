@@ -18,6 +18,7 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
+            <th scope="col">ID(Resultados)</th>
             <th scope="col">Evaluador</th>
             <th scope="col">Evaluado</th>
             <th scope="col">Pregunta1</th>
@@ -84,6 +85,7 @@
       <tbody>
         @foreach($evaluator->evaluated as $evaluated)
         <tr>
+          <td>{{$evaluated->pivot->id}}</td>
           <td>{{$evaluator->name}}</td>
           <td>{{$evaluated->name}}</td>
           <td>{{$evaluated->pivot->answer1}}</td>
