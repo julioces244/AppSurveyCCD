@@ -469,7 +469,7 @@ class EvaluatedController extends Controller
                   'answer41'];
 
       $columns2 = ['answer42'];
-      $columns3 = ['answer43','answer44','answer45'];
+      $columns3 = ['answer43','answer44'];
 
      $resultcolums = ['answer1','answer2','answer3'];
      $workteamcolums = ['answer4','answer5','answer6'];
@@ -1254,19 +1254,30 @@ class EvaluatedController extends Controller
 
       //dd(round($percentagehb4,2));
 
-      $totalcolumnaspot = count($columns3);
+
+      $col45s = DB::table('evaluator_evaluated')->where('answer45', 'Sí, siempre')->where('evaluated_id',$idevaluated)->count();
+      $col45f = DB::table('evaluator_evaluated')->where('answer45', 'Frecuentemente')->where('evaluated_id',$idevaluated)->count();
+      $col45a = DB::table('evaluator_evaluated')->where('answer45', 'A veces')->where('evaluated_id',$idevaluated)->count();
+      $col45n = DB::table('evaluator_evaluated')->where('answer45', 'No, nunca')->where('evaluated_id',$idevaluated)->count();
+
+      //dd($col45a);
+
+
+      $totalcolumnaspot = count($columns3)+1;
       $totalalternativaspot = $res2->count()*$totalcolumnaspot;
       if($totalalternativaspot > 0){
-        $percentagepot1 = round(($siemprepot/$totalalternativaspot)*100,2);
-        $percentagepot2 = round(($frecuentementepot/$totalalternativaspot)*100,2);
-        $percentagepot3 = round(($avecespot/$totalalternativaspot)*100,2);
-        $percentagepot4 = round(($nuncapot/$totalalternativaspot)*100,2);
+        $percentagepot1 = round((($siemprepot+$col45n)/$totalalternativaspot)*100,2);
+        $percentagepot2 = round((($frecuentementepot+$col45a)/$totalalternativaspot)*100,2);
+        $percentagepot3 = round((($avecespot+$col45f)/$totalalternativaspot)*100,2);
+        $percentagepot4 = round((($nuncapot+$col45s)/$totalalternativaspot)*100,2);
       }else{
         $percentagepot1 = 0;
         $percentagepot2 = 0;
         $percentagepot3 = 0;
         $percentagepot4 = 0;
       }
+
+      //dd($frecuentementepot);
 
 
       $finalgraph1 = ($percentagehb1*0.4)+($percentageexp1*0.4)+($percentagepot1*0.2);
@@ -1275,6 +1286,8 @@ class EvaluatedController extends Controller
       $finalgraph4 = ($percentagehb4*0.4)+($percentageexp4*0.4)+($percentagepot4*0.2);
 
       $finalscore = ($finalgraph1+$finalgraph2);
+
+
 
 
       return view('scoreevaluado')->with('person',$person)->with('percentagehb1', $percentagehb1)
