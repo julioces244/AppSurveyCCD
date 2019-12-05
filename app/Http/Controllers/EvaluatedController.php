@@ -1280,10 +1280,10 @@ class EvaluatedController extends Controller
       //dd($frecuentementepot);
 
 
-      $finalgraph1 = ($percentagehb1*0.4)+($percentageexp1*0.4)+($percentagepot1*0.2);
-      $finalgraph2 = ($percentagehb2*0.4)+($percentageexp2*0.4)+($percentagepot2*0.2);
-      $finalgraph3 = ($percentagehb3*0.4)+($percentageexp3*0.4)+($percentagepot3*0.2);
-      $finalgraph4 = ($percentagehb4*0.4)+($percentageexp4*0.4)+($percentagepot4*0.2);
+      $finalgraph1 = ($percentagehb1*0.4)+($percentageexp1*0.2)+($percentagepot1*0.4);
+      $finalgraph2 = ($percentagehb2*0.4)+($percentageexp2*0.2)+($percentagepot2*0.4);
+      $finalgraph3 = ($percentagehb3*0.4)+($percentageexp3*0.2)+($percentagepot3*0.4);
+      $finalgraph4 = ($percentagehb4*0.4)+($percentageexp4*0.2)+($percentagepot4*0.4);
 
       $finalscore = ($finalgraph1+$finalgraph2);
 
