@@ -9,6 +9,9 @@ use App\Evaluated;
 class EvaluatedController extends Controller
 {
 
+
+
+
     public function getEvaluatedAll(){
 
       try{
@@ -95,7 +98,7 @@ class EvaluatedController extends Controller
           break;
         }
 
-        $evalauteds = DB::table('evaluated')->whereIn('category_id', $array)->whereNotIn('idevaluated', [$idcategory])->get();
+        $evalauteds = DB::table('evaluated')->whereIn('category_id',    ->whereNotIn('idevaluated', [$idcategory])->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
@@ -181,7 +184,7 @@ class EvaluatedController extends Controller
           break;
         }
 
-        $evalauteds = DB::table('evaluated')->whereIn('category_id', $array)->whereNotIn('idevaluated', [$idself])->get();
+        $evalauteds = DB::table('evaluated')->whereIn('idEvaluated', $idself)->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
