@@ -48,5 +48,5 @@ Route::get('/getEvaluatedAcompañanteaprendizaje', 'EvaluatedController@getEvalu
 Route::get('/getEvaluatedAcompañantedigital', 'EvaluatedController@getEvaluatedAcompañantedigital');
 Route::get('/getEvaluatedAcompañantetecnologia', 'EvaluatedController@getEvaluatedAcompañantetecnologia');
 
-
+//Ruta para guardar las respuestas de cada evaluado
 Route::post('/storeScore/{idevaluador}','EvaluatorController@storeScore');

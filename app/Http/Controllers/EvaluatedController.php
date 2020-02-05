@@ -98,7 +98,7 @@ class EvaluatedController extends Controller
           break;
         }
 
-        $evalauteds = DB::table('evaluated')->whereIn('category_id',    ->whereNotIn('idevaluated', [$idcategory])->get();
+        $evalauteds = DB::table('evaluated')->whereIn('category_id', $idself )->whereNotIn('idevaluated', [$idcategory])->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
@@ -184,7 +184,7 @@ class EvaluatedController extends Controller
           break;
         }
 
-        $evalauteds = DB::table('evaluated')->whereIn('idEvaluated', $idself)->get();
+        $evalauteds = DB::table('evaluated')->where('idEvaluated', $idself)->get();
         return $evalauteds;
         return response()->json(['type' => 'success', 'message' => 'Lista obtenida'], 200);
 
