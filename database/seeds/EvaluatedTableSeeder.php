@@ -12,182 +12,182 @@ class EvaluatedTableSeeder extends Seeder
     public function run()
     {
       DB::table('evaluated')->insert([
-          'name' => 'Ascencio Gonzales Joel Alberto',
-          'image' => 'joelascencio.png',
+          'name' => 'Usuario001',
+          'image' => 'ic_profile.png',
           'category_id' => 13,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Fajardo De La Cruz Luis Jhon',
-          'image' => 'luisfajardo.jpg',
+          'name' => 'Usuario002',
+          'image' => 'ic_profile.png',
           'category_id' => 9,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Saravia Flores Jorge Luis Abdías',
-          'image' => 'luissaravia.png',
+          'name' => 'Usuario003',
+          'image' => 'ic_profile.png',
           'category_id' => 3,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Ñañez Vasquez Ruddy Katherine',
-          'image' => 'ruddyñañez.jpg',
+          'name' => 'Usuario004',
+          'image' => 'ic_profile.png',
           'category_id' => 3,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Sanchez Huacahuasi, Marco Antonio',
-          'image' => 'marcosanchez.jpg',
+          'name' => 'Usuario005',
+          'image' => 'ic_profile.png',
           'category_id' => 3,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Carmen Aliaga Pérez',
-          'image' => 'carmenaliaga.png',
+          'name' => 'Usuario006',
+          'image' => 'ic_profile.png',
           'category_id' => 3,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Altamirano Perez Raul King',
-          'image' => 'raulaltamirano.png',
+          'name' => 'Usuario007',
+          'image' => 'ic_profile.png',
           'category_id' => 4,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Joyo Uchuñaupa Leoncio Juan',
-          'image' => 'leonciojoyo.png',
+          'name' => 'Usuario008',
+          'image' => 'ic_profile.png',
           'category_id' => 7,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Jesús Meza Palomino',
-          'image' => 'jesusmeza.png',
+          'name' => 'Usuario009',
+          'image' => 'ic_profile.png',
           'category_id' => 4,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Jhonatan Aliaga Perez',
-          'image' => 'jhonatanaliaga.png',
+          'name' => 'Usuario010',
+          'image' => 'ic_profile.png',
           'category_id' => 4,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Quintana Pizarro Yesenia Mercedes',
-          'image' => 'yeseniaquintana.png',
+          'name' => 'Usuario011',
+          'image' => 'ic_profile.png',
           'category_id' => 12,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Olascoaga Alva Elina',
-          'image' => 'elinaolascoaga.png',
+          'name' => 'Usuario012',
+          'image' => 'ic_profile.png',
           'category_id' => 5,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Tinajeros  Salazar Jessica',
-          'image' => 'jessicatinajeros.png',
+          'name' => 'Usuario013',
+          'image' => 'ic_profile.png',
           'category_id' => 8,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Boyd Brenis César Augusto',
-          'image' => 'cesarboyd.png',
+          'name' => 'Usuario014',
+          'image' => 'ic_profile.png',
           'category_id' => 8,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Arosena Aguirre Luis Arturo',
-          'image' => 'luisarosena.png',
+          'name' => 'Usuario015',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Hernandez Chang Merly Zulema',
-          'image' => 'merlyhernandez.png',
+          'name' => 'Usuario016',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Palomino Pebe Juan Pablo',
-          'image' => 'juanpalomino.png',
+          'name' => 'Usuario017',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Huamaní Rojas Elva Ynes',
-          'image' => 'elvahuamani.png',
+          'name' => 'Usuario018',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Falconi Muñante Bertha Elena',
-          'image' => 'berthafalconi.png',
+          'name' => 'Usuario019',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Rios Soto Gladys Manuela',
-          'image' => 'gladysrios.png',
+          'name' => 'Usuario020',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Napa Mesa Rosa Ana',
-          'image' => 'rosanapa.png',
+          'name' => 'Usuario021',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Marina Ccoyca Portillo',
-          'image' => 'marinaccoyca.png',
+          'name' => 'Usuario022',
+          'image' => 'ic_profile.png',
           'category_id' => 2,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Wilfredo Marroquin Villanueva',
-          'image' => 'wilfredomarroquin.jpg',
+          'name' => 'Usuario023',
+          'image' => 'ic_profile.png',
           'category_id' => 14,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Giancarlo Pradinet',
-          'image' => 'giancarlopradinet.png',
+          'name' => 'Usuario024',
+          'image' => 'ic_profile.png',
           'category_id' => 11,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Rudy Laguna',
-          'image' => 'rudylaguna.jpg',
+          'name' => 'Usuario025',
+          'image' => 'ic_profile.png',
           'category_id' => 16,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Fátima Cabrera',
-          'image' => 'fatimacabrera.jpg',
+          'name' => 'Usuario026',
+          'image' => 'ic_profile.png',
           'category_id' => 15,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Katherine Piedra',
-          'image' => 'katherinepiedra.jpg',
+          'name' => 'Usuario027',
+          'image' => 'ic_profile.png',
           'category_id' => 16,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Gene Eduardo Olarte',
-          'image' => 'eduardoolarte.jpg',
+          'name' => 'Usuario028',
+          'image' => 'ic_profile.png',
           'category_id' => 15,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'Alvaro Orozco',
-          'image' => 'alvaroorozco.jpg',
+          'name' => 'Usuario029',
+          'image' => 'ic_profile.png',
           'category_id' => 15,
       ]);
 
       DB::table('evaluated')->insert([
-          'name' => 'José Perez',
-          'image' => 'joseperez.png',
+          'name' => 'Usuario030',
+          'image' => 'ic_profile.png',
           'category_id' => 10,
       ]);
     }
