@@ -91,7 +91,8 @@ class EvaluatorController extends Controller
             'answer30' => $respuesta->pregunta30,
             'answer31' => $respuesta->pregunta31,
             'answer32' => $respuesta->pregunta32,
-            'answer33' => $respuesta->pregunta33]);
+            'answer33' => $respuesta->pregunta33,
+            'answer34' => $respuesta->pregunta34]);
 
         }
 
