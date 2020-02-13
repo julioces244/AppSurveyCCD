@@ -468,22 +468,21 @@ class EvaluatedController extends Controller
       $columns = ['answer1','answer2','answer3','answer4','answer5','answer6','answer7','answer8','answer9','answer10',
                   'answer11','answer12','answer13','answer14','answer15','answer16','answer17','answer18','answer19','answer20',
                   'answer21','answer22','answer23','answer24','answer25','answer26','answer27','answer28','answer29','answer30',
-                  'answer31','answer32','answer33','answer34','answer35','answer36','answer37','answer38','answer39','answer40',
-                  'answer41'];
+                  'answer31','answer32'];
 
-      $columns2 = ['answer42'];
-      $columns3 = ['answer43','answer44'];
+      $columns2 = ['answer34'];
+      $columns3 = ['answer33'];
 
      $resultcolums = ['answer1','answer2','answer3'];
      $workteamcolums = ['answer4','answer5','answer6'];
-     $flexicolums = ['answer7','answer8','answer9'];
-     $responcolums = ['answer10','answer11'];
-     $visioncolums = ['answer12','answer13'];
-     $planificolums = ['answer14','answer15','answer16','answer17','answer18','answer19'];
-     $managementcolums = ['answer20','answer21','answer22','answer23','answer24','answer25','answer26','answer27','answer28'];
-     $comunicacolums = ['answer29','answer30','answer31','answer32','answer33','answer34'];
-     $peoplecolums = ['answer35','answer36'];
-     $presioncolums = ['answer37','answer38','answer39','answer40','answer41'];
+     $flexicolums = ['answer7','answer8'];
+     $responcolums = ['answer9','answer10','answer11'];
+     $visioncolums = ['answer12'];
+     $planificolums = ['answer13','answer14'];
+     $managementcolums = ['answer15','answer16','answer17','answer18','answer19','answer20','answer21','answer22','answer23'];
+     $comunicacolums = ['answer24','answer25','answer26','answer27','answer28'];
+     $peoplecolums = ['answer29','answer30'];
+     $presioncolums = ['answer31','answer32'];
 
 
 
@@ -593,7 +592,7 @@ class EvaluatedController extends Controller
       foreach ($columns2 as $column) {
         $dataexp = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['Sí, siempre','Siempre','Mucha'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['Sí, siempre','Siempre','Mucha','Mas de 5'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datasexp["all"] += $dataexp["count_true"];
       }
@@ -601,7 +600,7 @@ class EvaluatedController extends Controller
       foreach ($columns2 as $column) {
         $dataexp2 = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['Frecuentemente','Regular'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['Frecuentemente','Regular','3 a 5'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datasexp2["all"] += $dataexp2["count_true"];
       }
@@ -609,7 +608,7 @@ class EvaluatedController extends Controller
       foreach ($columns2 as $column) {
         $dataexp3 = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['A veces','Poca'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['A veces','Poca','1 a 2'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datasexp3["all"] += $dataexp3["count_true"];
       }
@@ -617,7 +616,7 @@ class EvaluatedController extends Controller
       foreach ($columns2 as $column) {
         $dataexp4 = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['No, nunca','Nunca','Ninguna'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['No, nunca','Nunca','Ninguna','Ninguno'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datasexp4["all"] += $dataexp4["count_true"];
       }
