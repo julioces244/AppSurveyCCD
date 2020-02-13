@@ -1268,10 +1268,10 @@ class EvaluatedController extends Controller
       $totalcolumnaspot = count($columns3)+1;
       $totalalternativaspot = $res2->count()*$totalcolumnaspot;
       if($totalalternativaspot > 0){
-        $percentagepot1 = round((($siemprepot+$col45n)/$totalalternativaspot)*100,2);
-        $percentagepot2 = round((($frecuentementepot+$col45a)/$totalalternativaspot)*100,2);
-        $percentagepot3 = round((($avecespot+$col45f)/$totalalternativaspot)*100,2);
-        $percentagepot4 = round((($nuncapot+$col45s)/$totalalternativaspot)*100,2);
+        $percentagepot1 = round((($siemprepot)/$totalalternativaspot)*100,2);
+        $percentagepot2 = round((($frecuentementepot)/$totalalternativaspot)*100,2);
+        $percentagepot3 = round((($avecespot)/$totalalternativaspot)*100,2);
+        $percentagepot4 = round((($nuncapot)/$totalalternativaspot)*100,2);
       }else{
         $percentagepot1 = 0;
         $percentagepot2 = 0;
