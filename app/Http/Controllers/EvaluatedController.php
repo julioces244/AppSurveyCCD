@@ -1264,8 +1264,8 @@ class EvaluatedController extends Controller
 
       //dd($col45a);
 
-
-      $totalcolumnaspot = count($columns3)+1;
+      //habia sumado +1 a count(columns3)+1;
+      $totalcolumnaspot = count($columns3);
       $totalalternativaspot = $res2->count()*$totalcolumnaspot;
       if($totalalternativaspot > 0){
         $percentagepot1 = round((($siemprepot)/$totalalternativaspot)*100,2);
