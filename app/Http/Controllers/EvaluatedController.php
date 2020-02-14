@@ -627,7 +627,7 @@ class EvaluatedController extends Controller
       foreach ($columns3 as $column) {
         $datapot = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['Sí, siempre','Siempre'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['Sí, siempre','Siempre','Calmado, reflexivo y actúa'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $dataspot["all"] += $datapot["count_true"];
       }
@@ -635,7 +635,7 @@ class EvaluatedController extends Controller
       foreach ($columns3 as $column) {
         $datapot2 = [
           "column_name" => $column,
-          "count_true" => $res->where($column,'Frecuentemente')->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->where($column,['Frecuentemente','Reflexivo sin actuar'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $dataspot2["all"] += $datapot2["count_true"];
       }
@@ -643,7 +643,7 @@ class EvaluatedController extends Controller
       foreach ($columns3 as $column) {
         $datapot3 = [
           "column_name" => $column,
-          "count_true" => $res->where($column,'A veces')->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->where($column,['A veces','Indiferente'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $dataspot3["all"] += $datapot3["count_true"];
       }
@@ -651,7 +651,7 @@ class EvaluatedController extends Controller
       foreach ($columns3 as $column) {
         $datapot4 = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['No, nunca','Nunca'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['No, nunca','Nunca','Alterado'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $dataspot4["all"] += $datapot4["count_true"];
       }
