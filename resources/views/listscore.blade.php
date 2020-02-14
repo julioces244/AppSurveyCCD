@@ -55,30 +55,6 @@
             <th scope="col">Pregunta32</th>
             <th scope="col">Pregunta33</th>
             <th scope="col">Pregunta34</th>
-            <th scope="col">Pregunta35</th>
-            <th scope="col">Pregunta36</th>
-            <th scope="col">Pregunta37</th>
-            <th scope="col">Pregunta38</th>
-            <th scope="col">Pregunta39</th>
-            <th scope="col">Pregunta40</th>
-            <th scope="col">Pregunta41</th>
-            <th scope="col">Pregunta42</th>
-            <th scope="col">Pregunta43</th>
-            <th scope="col">Pregunta44</th>
-            <th scope="col">Pregunta45</th>
-            <th scope="col">Pregunta46</th>
-            <th scope="col">Pregunta47</th>
-            <th scope="col">Pregunta48</th>
-            <th scope="col">Pregunta49</th>
-            <th scope="col">Pregunta50</th>
-            <th scope="col">Pregunta51</th>
-            <th scope="col">Pregunta52</th>
-            <th scope="col">Pregunta53</th>
-            <th scope="col">Pregunta54</th>
-            <th scope="col">Pregunta55</th>
-            <th scope="col">Pregunta56</th>
-            <th scope="col">Pregunta57</th>
-            <th scope="col">Pregunta58</th>
         </tr>
       </thead>
 

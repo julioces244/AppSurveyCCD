@@ -1257,10 +1257,10 @@ class EvaluatedController extends Controller
       //dd(round($percentagehb4,2));
 
 
-      $col45s = DB::table('evaluator_evaluated')->where('answer45', 'Sí, siempre')->where('evaluated_id',$idevaluated)->count();
-      $col45f = DB::table('evaluator_evaluated')->where('answer45', 'Frecuentemente')->where('evaluated_id',$idevaluated)->count();
-      $col45a = DB::table('evaluator_evaluated')->where('answer45', 'A veces')->where('evaluated_id',$idevaluated)->count();
-      $col45n = DB::table('evaluator_evaluated')->where('answer45', 'No, nunca')->where('evaluated_id',$idevaluated)->count();
+      //$col45s = DB::table('evaluator_evaluated')->where('answer45', 'Sí, siempre')->where('evaluated_id',$idevaluated)->count();
+      //$col45f = DB::table('evaluator_evaluated')->where('answer45', 'Frecuentemente')->where('evaluated_id',$idevaluated)->count();
+      //$col45a = DB::table('evaluator_evaluated')->where('answer45', 'A veces')->where('evaluated_id',$idevaluated)->count();
+      //$col45n = DB::table('evaluator_evaluated')->where('answer45', 'No, nunca')->where('evaluated_id',$idevaluated)->count();
 
       //dd($col45a);
 
