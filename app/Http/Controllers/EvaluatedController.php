@@ -554,7 +554,7 @@ class EvaluatedController extends Controller
       foreach ($columns as $column) {
         $data = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['Sí, siempre','Siempre','Trabaja con normalidad y respeto','Excelente'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['Sí, siempre','Siempre','Trabaja con normalidad y respeto','Excelente','Calmado, reflexivo y actúa'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datas["all"] += $data["count_true"];
         //dd($datas["all"]);
@@ -563,7 +563,7 @@ class EvaluatedController extends Controller
       foreach ($columns as $column) {
         $data2 = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['Frecuentemente','Trabaja con normalidad','Bien'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['Frecuentemente','Trabaja con normalidad','Bien','Reflexivo sin actuar'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datas2["all"] += $data2["count_true"];
         //dd($datas["all"]);
@@ -572,7 +572,7 @@ class EvaluatedController extends Controller
       foreach ($columns as $column) {
         $data3 = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['A veces','No trabaja con normalidad, se ofusca','Regular'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['A veces','No trabaja con normalidad, se ofusca','Regular','Indiferente'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datas3["all"] += $data3["count_true"];
         //dd($datas["all"]);
@@ -581,7 +581,7 @@ class EvaluatedController extends Controller
       foreach ($columns as $column) {
         $data4 = [
           "column_name" => $column,
-          "count_true" => $res->whereIn($column,['No, nunca','Nunca','No trabaja con normalidad, falta el respeto','Mal'])->where('evaluated_id',$idevaluated)->count(),
+          "count_true" => $res->whereIn($column,['No, nunca','Nunca','No trabaja con normalidad, falta el respeto','Mal','Alterado'])->where('evaluated_id',$idevaluated)->count(),
         ];
         $datas4["all"] += $data4["count_true"];
         //dd($datas["all"]);
